@@ -28,3 +28,8 @@
     border-radius: 5px;
     position: relative;
 }
+input {
+    border-radius: 20px;
+    padding: 4px 10px;
+    border : solid 1px rgb(50, 48, 48);
+}
