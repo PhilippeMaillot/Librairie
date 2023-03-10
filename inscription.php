@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="cadre">
+<div class="cadre">
 <nav class="navbar background">
         <ul class="nav-list">
                 <li><a href="index.php" class="btn">Accueil</a></li>
@@ -27,6 +27,13 @@
                 <?php } ?>
             </ul>   
 </nav>
-</div>
+
+        <form action="php_insc.php" method="get">
+            <p>Nom <input name="nom" type="text"/></p>
+            <p>Email <input name="email" type="email"/></p>
+            <p>Mot de passe <input name="mdp" type="password"></p>
+        <input type="submit" value="Confirmer"/><br/>
+    </form> 
+    </div>
 </body>
-</html> 
+</html>
