@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F8FBF1;
+}
 .navbar{
-    border-radius: 20px;
+    border-radius: 10%;
     padding: 4px 10px;
-    border : solid 1px;
     top: 10px;
     position: relative;
     justify-content: space-between;
@@ -19,22 +22,24 @@
     padding: 10px 7px;
 }
 .background{
-    background-color: rgb(140, 154, 157);
+    background-color: #969587;
     background-blend-mode: darken;
     background-size: cover;
 }
 .cadre{
     margin: auto;
-    background-color: rgb(153, 166, 178);
+    background-color: #9E9F8D;
     width: 80%;
     padding: 32px;
-    border-radius: 5px;
     position: relative;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
 }
 input {
     border-radius: 20px;
-    padding: 4px 10px;
+    padding: 10px 10px;
     border : solid 1px rgb(50, 48, 48);
+    margin-right: 120px;
 }
 .btn {
     display: inline-block;
@@ -42,22 +47,26 @@ input {
     border-radius: 25px;
     text-decoration: none;
     color: #424340;
-    background-color: rgb(153, 166, 178);
+    background-color: #CFC7BC;
     transition: background-color 0.3s ease;
     margin-right: 10px;
 }
  .btn2 {
   display: inline-block;
-  padding: 10px 10px;
-  border-radius: 25px;
+  padding: 10px 50px;
+  border-radius: 10px;
   text-decoration: none;
-  color: #424340;
-  background-color: rgb(83, 113, 141);
+  background-color: rgb(236, 240, 243);
   transition: background-color 0.3s ease;
   margin-right: 10px;
+  border-width: 1px;
+  border-color: #9E9F8D;
+}
+  .btn2:hover{
+    background-color: rgba(163, 170, 168, 0.096);
 }
   .btn:hover {
-    background-color: rgb(140, 154, 157);
+    background-color: rgba(245, 253, 255, 0);
   }
   .search-container {
     margin-left: auto;
@@ -72,4 +81,30 @@ input {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-items: center;
+}
+  .panier {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  .panier li {
+  flex: 25%;
+  margin: 10px;
+  list-style: none;
+}
+h1{
+  text-align: center;
+}
+.cadre2{
+  margin: auto;
+    background-color: #CFC7BC;
+    width: 80%;
+    padding: 32px;
+    position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.book-result{
+  flex-wrap: wrap;
+  margin: 10px;
 }
