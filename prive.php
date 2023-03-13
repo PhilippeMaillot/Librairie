@@ -23,7 +23,7 @@
                 <?php
             if(isset($_SESSION['admin'])){
             ?>
-                <li><a href="deco.php">Deconnexion</a></li>
+                <li><a href="deco.php" class="btn">Deconnexion</a></li>
                 <?php } ?>
             </ul>   
 </nav>

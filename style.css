@@ -33,3 +33,23 @@ input {
     padding: 4px 10px;
     border : solid 1px rgb(50, 48, 48);
 }
+.btn {
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #424340;
+    background-color: rgb(153, 166, 178);
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+  .btn:hover {
+    background-color: rgb(140, 154, 157);
+  }
+  .search-container {
+    float: center;
+  }
+  .bouton-connexion, .bouton-inscription {
+    display: none;
+  }
+  

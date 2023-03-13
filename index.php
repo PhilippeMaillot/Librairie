@@ -23,10 +23,16 @@
                 <?php
             if(isset($_SESSION['admin'])){
             ?>
-                <li><a href="deco.php">Deconnexion</a></li>
+                <li><a href="deco.php" class="btn">Deconnexion</a></li>
                 <?php } ?>
-            </ul>   
-</nav>
+                <div class="search-container">
+                <form action="recherche.php" method="get">
+                <input name="nom" type="text"/>
+                <input type="submit" value="Rechercher">
+            </form>
+        </div>
+        </ul>   
+    </nav>
 </div>
 </body>
 </html> 
