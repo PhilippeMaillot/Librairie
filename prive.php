@@ -46,7 +46,7 @@ if (isset($_SESSION['user'])) {
     }
 
     // Récupération des livres dans le panier de l'utilisateur
-    $id_user = $_SESSION['user'];
+    $id_user = $_SESSION['user']['id'];
     $sql = "SELECT * FROM panier WHERE id_utilisateur = '$id_user'";
     $result = $conn->query($sql);
 

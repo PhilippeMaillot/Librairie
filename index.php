@@ -36,7 +36,7 @@
         <?php
 if (isset($_SESSION['user'])) {
     $connexion = new mysqli("localhost", "root", "", "biblio");
-    $requete = "SELECT * FROM user WHERE nom = '".$_SESSION['user']."'";
+    $requete = "SELECT * FROM user WHERE nom = '".$_SESSION['user']['nom']."'";
     $result = $connexion->query($requete);
     if ($result->num_rows > 0) {
         $data = $result->fetch_assoc();

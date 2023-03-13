@@ -9,7 +9,7 @@
  $hash = $ligne['mdp'];
  if (password_verify($mdp, $hash)) {
     session_start();
-    $_SESSION['user'] = $ligne['nom'];
+    $_SESSION['user'] = $ligne;
  header('Location: co_reussi.php');
 }
 else{
