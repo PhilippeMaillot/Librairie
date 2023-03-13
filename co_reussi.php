@@ -1,8 +1,7 @@
 <?php
             session_start();
-            if(isset($_SESSION['admin'])){
-        ?>
-<P>Bonjour vous êtes connecté <?= htmlspecialchars($_SESSION['admin']['nom']) ?> </p>
-<?php } header("Location: index.php");
-        exit;
+            if(isset($_SESSION['user'])){
+       
+        header("Location: index.php");
+} 
 ?>

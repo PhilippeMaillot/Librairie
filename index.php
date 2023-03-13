@@ -14,25 +14,22 @@
                 <li><a href="index.php" class="btn">Accueil</a></li>
                 <?php
             session_start();
-            if(isset($_SESSION['admin'])){
+            if(isset($_SESSION['user'])){
             ?>
                 <li><a href="prive.php" class="btn">Bibliothèque privé</a></li>
-                <?php } ?>
+                <li><a href="deco.php" class="btn">Deconnexion</a></li>
+                <?php } else { ?>
                 <li><a href="inscription.php" class="btn">Inscription</a></li>
                 <li><a href="connexion.php" class="btn">Connexion</a></li>
-                <?php
-            if(isset($_SESSION['admin'])){
-            ?>
-                <li><a href="deco.php" class="btn">Deconnexion</a></li>
                 <?php } ?>
                 <div class="search-container">
                 <form action="recherche.php" method="get">
-                <input name="nom" type="text"/>
-                <input type="submit" value="Rechercher">
+                <input name="nom" type="text" placeholder="Rechercher ici">
+                <input type="submit" value="Rechercher" class="recherche">
             </form>
         </div>
         </ul>   
     </nav>
 </div>
 </body>
-</html> 
+</html>

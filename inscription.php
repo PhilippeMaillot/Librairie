@@ -14,7 +14,7 @@
                 <li><a href="index.php" class="btn">Accueil</a></li>
                 <?php
             session_start();
-            if(isset($_SESSION['admin'])){
+            if(isset($_SESSION['user'])){
             ?>
                 <li><a href="prive.php" class="btn">Bibliothèque privé</a></li>
                 <?php } ?>
@@ -27,7 +27,6 @@
                 <?php } ?>
             </ul>   
 </nav>
-
         <form action="php_insc.php" method="get">
             <p>Nom <input name="nom" type="text"/></p>
             <p>Email <input name="email" type="email"/></p>

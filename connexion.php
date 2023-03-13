@@ -14,14 +14,14 @@
                 <li><a href="index.php" class="btn">Accueil</a></li>
                 <?php
             session_start();
-            if(isset($_SESSION['admin'])){
+            if(isset($_SESSION['user'])){
             ?>
                 <li><a href="prive.php" class="btn">Bibliothèque privé</a></li>
                 <?php } ?>
                 <li><a href="inscription.php" class="btn">Inscription</a></li>
                 <li><a href="connexion.php" class="btn">Connexion</a></li>
                 <?php
-            if(isset($_SESSION['admin'])){
+            if(isset($_SESSION['user'])){
             ?>
                 <li><a href="deco.php" class="btn">Deconnexion</a></li>
                 <?php } ?>
