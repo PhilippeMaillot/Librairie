@@ -16,7 +16,7 @@ if (isset($_POST['titre']) && isset($_POST['categorie']) && isset($_POST['auteur
     // Vérification de la session
     session_start();
     if (isset($_SESSION['user'])) {
-        $id_user = $_SESSION['user'];
+        $id_user = $_SESSION['user']['id'];
         // Parcours des résultats postés
         for ($i = 0; $i < count($_POST['titre']); $i++) {
             // Récupération des données
