@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .navbar{
     border-radius: 20px;
     padding: 4px 10px;
@@ -44,6 +45,16 @@ input {
     background-color: rgb(153, 166, 178);
     transition: background-color 0.3s ease;
     margin-right: 10px;
+}
+ .btn2 {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #424340;
+  background-color: rgb(83, 113, 141);
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
 }
   .btn:hover {
     background-color: rgb(140, 154, 157);

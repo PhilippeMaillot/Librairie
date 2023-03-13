@@ -57,8 +57,9 @@ if ($result->num_rows > 0) {
         echo "</div>";
      ?> <form action="suppr_livre.php" method="POST">
      <input type="hidden" name="id_panier" value="<?php echo $row['id_panier']; ?>">
-     <button type="submit">Supprimer</button>
+     <button type="submit" class="btn">Supprimer</button>
  </form>
+ <br>
  <?php
     }     
 }
