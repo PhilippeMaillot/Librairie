@@ -120,4 +120,6 @@ input[type="image"] {
   transform: translateX(-240%);
   margin-top: 1.5%;
 }
-
+.supprimer {
+  margin-right: 40%;
+}

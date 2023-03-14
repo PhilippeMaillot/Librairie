@@ -16,9 +16,10 @@
                 <?php
             session_start();
             if(isset($_SESSION['user'])){
+                $data = $_SESSION['user']['nom'];
             ?>
                 <li><a href="prive.php" class="btn">Liste de lecture</a></li>
-                <li><a href="modif.php" class="btn">Compte</a></li>
+                <li><a href="modif.php" class="btn"><?php echo $data; ?></a></li>
                 <li><a href="deco.php" class="btn">Deconnexion</a></li>
                 <?php } else { ?>
                 <li><a href="inscription.php" class="btn">Inscription</a></li>

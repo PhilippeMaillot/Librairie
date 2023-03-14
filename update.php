@@ -15,6 +15,7 @@ if (!empty($_POST["mdp"])) {
   $requete = "UPDATE user SET email='$mail', nom='$nom' WHERE id='$id'";
 }
 $res = $connexion->query($requete);
+session_start();
 session_destroy();
 header('Location: index.php');
 
