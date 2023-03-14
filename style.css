@@ -36,10 +36,10 @@
     border-top-left-radius: 40px;
 }
 input {
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 10px;
     border : solid 1px rgb(50, 48, 48);
-    margin-right: 120px;
+    margin-right: 30px;
 }
 .btn {
     display: inline-block;
@@ -108,3 +108,16 @@ h1{
   flex-wrap: wrap;
   margin: 10px;
 }
+input[type="image"] {
+  border: none;
+  background-image: url("./img/loupe.png");
+  width: 8px;
+  height: 8px;
+  float: right;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  transform: translateX(-240%);
+  margin-top: 1.5%;
+}
+

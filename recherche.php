@@ -25,7 +25,7 @@
                 <div class="search-container">
                 <form action="recherche.php" method="get">
                 <input name="nom" type="text" placeholder="Rechercher ici">
-                <input type="submit" value="Rechercher" class="recherche">
+                <input type="image" src="./img/loupe.png">
             </form>
         </div>
         </ul>   

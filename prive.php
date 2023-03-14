@@ -18,6 +18,7 @@
             if(isset($_SESSION['user'])){
             ?>
                 <li><a href="prive.php" class="btn">Liste de lecture</a></li>
+                <li><a href="modif.php" class="btn">Compte</a></li>
                 <li><a href="deco.php" class="btn">Deconnexion</a></li>
                 <?php } else { ?>
                 <li><a href="inscription.php" class="btn">Inscription</a></li>
@@ -26,7 +27,7 @@
                 <div class="search-container">
                 <form action="recherche.php" method="get">
                 <input name="nom" type="text" placeholder="Rechercher ici">
-                <input type="submit" value="Rechercher" class="recherche">
+                <input type="image" src="./img/loupe.png">
             </form>
         </div>
         </ul>   

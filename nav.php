@@ -33,24 +33,3 @@
         </ul>   
     </nav>
     </div>
-        <div class="cadre2">
-        <?php
-if (isset($_SESSION['user'])) {
-    $connexion = new mysqli("localhost", "root", "", "biblio");
-    $requete = "SELECT * FROM user WHERE nom = '".$_SESSION['user']['nom']."'";
-    $result = $connexion->query($requete);
-    if ($result->num_rows > 0) {
-        $data = $result->fetch_assoc();
-        echo "Bienvenue sur Bookmazon " . $data['nom'] . ", une petite envie de lire ? ";
-    } else {
-        echo "Impossible de récupérer les informations de l'utilisateur connecté.";
-    }
-} else {
-    echo "Vous n'êtes pas connecté."; 
-}
-
-?>
-
-</div>
-</body>
-</html>
