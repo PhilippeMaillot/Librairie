@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultats</title>
+    <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,7 +34,7 @@
         </ul>   
     </nav>
     </div>
-            <div class="cadre2">
+        <div class="cadre2">
     <?php
         // Récupération du terme de recherche
         $searchTerm = $_GET['nom'];

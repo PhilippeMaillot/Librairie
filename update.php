@@ -3,7 +3,6 @@ $connexion= new mysqli("localhost","root","","biblio");
 $mail = $_POST["email"];
 $id = $_POST["id"];
 $nom = $_POST["nom"];
-
 if (!empty($_POST["mdp"])) {
   // Si le champ du mot de passe n'est pas vide, on hash le mot de passe
   $password = $_POST["mdp"];
@@ -18,5 +17,4 @@ $res = $connexion->query($requete);
 session_start();
 session_destroy();
 header('Location: index.php');
-
 ?>

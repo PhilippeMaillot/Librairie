@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
 </head>
 <body>
 <div class="cadre">
-    <h1>Bookmazon</h1>
+    <h1>Book ma zonex</h1>
     <nav class="navbar background">
       <ul class="nav-list">
         <li><a href="index.php" class="btn">Accueil</a></li>
@@ -76,17 +77,32 @@ $randomBooks = array_rand($data['items'], 10);
 
 // Parcours des livres aléatoires et affichage des informations
 foreach ($randomBooks as $bookIndex) {
-    
-    $volumeInfo = $data['items'][$bookIndex]['volumeInfo'];
-    echo '<h2>' . $volumeInfo['title'] . '</h2>';
-    echo '<p>Auteur(s) : ' . (isset($volumeInfo['authors']) ? implode(', ', $volumeInfo['authors']) : 'Information non disponible') . '</p>';
-    echo '<p>Editeur : ' . (isset($volumeInfo['publisher']) ? $volumeInfo['publisher'] : 'Information non disponible') . '</p>';
-    echo '<p>Date de publication : ' . (isset($volumeInfo['publishedDate']) ? $volumeInfo['publishedDate'] : 'Information non disponible') . '</p>';
-    echo '<p>Nombre de pages : ' . (isset($volumeInfo['pageCount']) ? $volumeInfo['pageCount'] : 'Information non disponible') . '</p>';
-    echo '<p><img src="' . (isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible') . '"></p>';
-    if(isset($_SESSION['user'])){ ?>
-        <input type="submit" value="Ajouter au panier" class="ajouter-panier">
-<?php }} ?>
+  $volumeInfo = $data['items'][$bookIndex]['volumeInfo'];
+?>
+  <div class="book">
+      <div class="book-info">
+          <h2><?= $volumeInfo['title'] ?></h2>
+          <p>Auteur(s) : <?= (isset($volumeInfo['authors']) ? implode(', ', $volumeInfo['authors']) : 'Information non disponible') ?></p>
+          <p>Editeur : <?= (isset($volumeInfo['publisher']) ? $volumeInfo['publisher'] : 'Information non disponible') ?></p>
+          <p>Date de publication : <?= (isset($volumeInfo['publishedDate']) ? $volumeInfo['publishedDate'] : 'Information non disponible') ?></p>
+          <p>Nombre de pages : <?= (isset($volumeInfo['pageCount']) ? $volumeInfo['pageCount'] : 'Information non disponible') ?></p>
+          <?php if(isset($_SESSION['user'])){ ?>
+            <form method="post" action="ajout_index.php">
+                    <input type="hidden" name="titre" value="<?= isset($volumeInfo['title']) ? $volumeInfo['title'] : 'Information non disponible' ?>">
+                    <input type="hidden" name="categorie" value="<?= isset($volumeInfo['categories'][0]) ? $volumeInfo['categories'][0] : 'Information non disponible' ?>">
+                    <input type="hidden" name="auteur" value="<?= isset($volumeInfo['authors'][0]) ? $volumeInfo['authors'][0] : 'Information non disponible' ?>">
+                    <input type="hidden" name="image" value="<?= isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible' ?>">
+                    <input type="submit" value="Ajouter au panier" class="ajouter-panier">
+                </form>
+                <div class="add-to-cart-message"></div>
+          <?php } ?>
+      </div>
+      <div class="book-cover">
+          <img src="<?= (isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible') ?>">
+      </div>
+  </div>
+<?php
+} ?>
 </div>
 </body>
 </html>

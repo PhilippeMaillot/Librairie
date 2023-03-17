@@ -81,7 +81,7 @@ input {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-items: center;
-}
+  }
   .panier {
   display: flex;
   flex-wrap: wrap;
@@ -122,4 +122,31 @@ input[type="image"] {
 }
 .supprimer {
   margin-right: 40%;
+}
+.book {
+  display: flex;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+.book-cover {
+  margin-left: 20px;
+}
+
+.book-cover img {
+  max-width: 100%;
+  height: auto;
+}
+.book-info p {
+  font-size: 7px;
+  flex: 25%;
+  margin: 10px;
+  list-style: none;
+}
+.book-info h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 350px;
+    font-size: 15px;
 }
