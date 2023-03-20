@@ -20,10 +20,10 @@ if (isset($_POST['titre']) && isset($_POST['categorie']) && isset($_POST['auteur
         // Parcours des résultats postés
         for ($i = 0; $i < count($_POST['titre']); $i++) {
             // Récupération des données
-            $titre = $_POST['titre'][$i];
-            $categorie = $_POST['categorie'][$i];
-            $auteur = $_POST['auteur'][$i];
-            $image = $_POST['image'][$i];
+            $titre = $conn->real_escape_string($_POST['titre'][$i]);
+            $categorie = $conn->real_escape_string($_POST['categorie'][$i]);
+            $auteur = $conn->real_escape_string($_POST['auteur'][$i]);
+            $image = $conn->real_escape_string($_POST['image'][$i]);
 
             $requete = "INSERT INTO panier (id_utilisateur, titre, categorie, auteur, image) VALUES ('$id_user', '$titre', '$categorie', '$auteur', '$image')";
 

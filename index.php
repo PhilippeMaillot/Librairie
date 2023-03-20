@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="cadre">
-    <h1>Book ma zonex</h1>
+    <h1>Book ma zone</h1>
     <nav class="navbar background">
       <ul class="nav-list">
         <li><a href="index.php" class="btn">Accueil</a></li>
