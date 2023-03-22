@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-</head>
-<body>
-<div class="cadre">
-    <h1>Book ma zone</h1>
-    <nav class="navbar background">
-      <ul class="nav-list">
-        <li><a href="index.php" class="btn">Accueil</a></li>
-        <?php
-          session_start();
-          if(isset($_SESSION['user'])){
-            $data = $_SESSION['user']['nom'];
-        ?>
-        <li><a href="prive.php" class="btn">Liste de lecture</a></li>
-        <li><a href="modif.php" class="btn"><?php echo $data; ?></a></li>
-        <li><a href="deco.php" class="btn">Deconnexion</a></li>
-        <?php } else { ?>
-        <li><a href="inscription.php" class="btn">Inscription</a></li>
-        <li><a href="connexion.php" class="btn">Connexion</a></li>
-        <?php } ?>
-        <div class="search-container">
-          <form action="recherche.php" method="get">
-            <input name="nom" type="text" placeholder="Rechercher ici">
-            <input type="image" src="./img/loupe.png">
-          </form>
-        </div>
-      </ul>   
-    </nav>
-  </div>
-
+<?php include('nav.php') ?>
   <div class="cadre2">
     <?php
     if (isset($_SESSION['user'])) {
@@ -51,7 +14,7 @@
     } 
     ?>
     <h1> Voici notre recommandation du jour : <h1>
-
+    <hr>
     <?php
     // Paramètres de recherche
     $authors = array('Herman Melville', 'Charles Dickens', 'Jane Austen', 'Edgar Allan Poe', 'Mark Twain', 'Agatha Christie', 'J.K. Rowling', 'Gabriel García Márquez', 'Ernest Hemingway', 'Toni Morrison');
@@ -80,6 +43,9 @@ foreach ($randomBooks as $bookIndex) {
   $volumeInfo = $data['items'][$bookIndex]['volumeInfo'];
 ?>
   <div class="book">
+  <div class="book-cover">
+          <img src="<?= (isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible') ?>">
+      </div>
       <div class="book-info">
           <h2><?= $volumeInfo['title'] ?></h2>
           <p>Auteur(s) : <?= (isset($volumeInfo['authors']) ? implode(', ', $volumeInfo['authors']) : 'Information non disponible') ?></p>
@@ -94,13 +60,10 @@ foreach ($randomBooks as $bookIndex) {
                     <input type="hidden" name="image" value="<?= isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible' ?>">
                     <input type="submit" value="Ajouter au panier" class="ajouter-panier">
                 </form>
-                <div class="add-to-cart-message"></div>
           <?php } ?>
       </div>
-      <div class="book-cover">
-          <img src="<?= (isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible') ?>">
-      </div>
   </div>
+  <hr>
 <?php
 } ?>
 </div>
