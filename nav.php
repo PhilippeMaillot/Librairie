@@ -9,29 +9,45 @@
     <title>Accueil</title>
 </head>
 <body>
-    <div class="cadre">
-    <h1>Book ma zone</h1>
+<div class="cadre">
 <nav class="navbar background">
-        <ul class="nav-list">
-                <li><a href="index.php" class="btn">Accueil</a></li>
-                <?php
+    <ul class="nav-list">
+        <li><h1><a href="index.php" class="titre">Book<span class="title">MaZone</span></a></h1></li>
+        <?php
             session_start();
             if(isset($_SESSION['user'])){
                 $data = $_SESSION['user']['nom'];
-            ?>
-                <li><a href="prive.php" class="btn">Liste de lecture</a></li>
-                <li><a href="modif.php" class="btn"><?php echo $data; ?></a></li>
-                <li><a href="deco.php" class="btn">Deconnexion</a></li>
-                <?php } else { ?>
-                <li><a href="inscription.php" class="btn">Inscription</a></li>
-                <li><a href="connexion.php" class="btn">Connexion</a></li>
-                <?php } ?>
-                <div class="search-container">
-                <form action="recherche.php" method="get">
-                <input name="nom" type="text" placeholder="Rechercher ici">
-                <input type="image" src="./img/loupe.png">
-            </form>
-        </div>
-        </ul>   
-    </nav>
-    </div>
+        ?>
+                <li>
+                    <div class="search-container">
+                        <form action="recherche.php" method="get">
+                            <input name="nom" type="text" placeholder="Rechercher ici">
+                            <input type="image" src="./img/loupe.png">
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn3">Compte</button>
+                        <div class="dropdown-content hidden">
+                            <a href="prive.php" class="dropdown-link">Liste de lecture</a><br>
+                            <a href="modif.php" class="dropdown-link"><?php echo $data; ?></a><br>
+                            <a href="deco.php" class="dropdown-link">Deconnexion</a>
+                        </div>
+                    </div>
+                </li>
+        <?php } else { ?>
+                <li><a href="inscription.php" class="btn2">Inscription</a></li>
+                <li><a href="connexion.php" class="btn2">Connexion</a></li>
+                <li>
+                    <div class="search-container">
+                        <form action="recherche.php" method="get">
+                            <input name="nom" type="text" placeholder="Rechercher ici">
+                            <input type="image" src="./img/loupe.png">
+                        </form>
+                    </div>
+                </li>
+        <?php } ?>
+    </ul>   
+</nav>
+</div>

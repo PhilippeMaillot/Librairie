@@ -22,24 +22,25 @@
     padding: 10px 7px;
 }
 .background{
-    background-color: #969587;
     background-blend-mode: darken;
     background-size: cover;
 }
 .cadre{
     margin: auto;
-    background-color: #9E9F8D;
-    width: 80%;
+    background-color: #e7e7e7;
+    width: 90%;
     padding: 32px;
     position: relative;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 input {
     border-radius: 10px;
-    padding: 10px 10px;
+    padding: 10px 50px;
     border : solid 1px rgb(50, 48, 48);
-    margin-right: 30px;
+    margin-right: 400px;
 }
 .btn {
     display: inline-block;
@@ -96,9 +97,9 @@ h1{
   text-align: center;
 }
 .cadre2{
-  margin: auto;
-    background-color: #CFC7BC;
-    width: 80%;
+    margin: auto;
+    background-color: #f0f0f0;
+    width: 90%;
     padding: 32px;
     position: relative;
     border-bottom-left-radius: 40px;
@@ -111,14 +112,12 @@ h1{
 input[type="image"] {
   border: none;
   background-image: url("./img/loupe.png");
-  width: 8px;
-  height: 8px;
+  width: 20px;
+  height: 20px;
   float: right;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  transform: translateX(-240%);
-  margin-top: 1.5%;
+  margin-top: -20px ;
+  padding-right: 550px;
 }
 .supprimer {
   margin-right: 40%;
@@ -130,30 +129,108 @@ input[type="image"] {
 }
 
 .book-cover {
-  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .book-cover img {
-  max-width: 100%;
   height: auto;
 }
-.book-info p {
-  font-size: 7px;
-  flex: 25%;
-  margin: 10px;
-  list-style: none;
-  text-align: left;
-  margin-left: 30px;
-}
-.book-info h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 350px;
-    font-size: 15px;
-    margin-left: 30px;
-}
-.book-info input {
-  margin-left: 700px;
+
+.book-info {
+  flex: 0.2;
 }
 
+.book-info h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 350px;
+  font-size: 15px;
+  margin-right: 400px;
+  font-size: large;
+}
+
+.book-info p {
+  font-size: 15px;
+  list-style: none;
+  text-align: left;
+
+  margin-right: auto;
+}
+.description {
+  white-space: pre-line;
+}
+.book-info input {
+  margin-left: 80rem;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(236, 240, 243);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 0.5rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dropdown-link {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0.5rem;
+}
+.dropdown-link:hover {
+  color: #7a7979;
+}
+.hidden {
+  display: none;
+}
+.btn3 {
+  display: inline-block;
+  padding: 10px 41px;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: rgb(236, 240, 243);
+  transition: background-color 0.3s ease;
+  margin-right: 100px;
+  border-width: 0.2px;
+  border-color: #ffffff;
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+}
+.title {
+  color: rgb(19, 19, 230);
+}
+.titre {
+  text-decoration: none;
+  color: inherit;
+}
+.search-container {
+  position: relative;
+  width: max-content;
+}
+
+.search-container input {
+  border-radius: 10px;
+  padding: 10px 80px;
+  border : solid 1px rgb(50, 48, 48);
+  margin-right: 450px;
+  margin-left: 450px;
+}
+
+.search-container input[type="image"] {
+  position: absolute;
+  right: -65px;
+  top: 105%;
+  transform: translateY(-50%);
+  border: none;
+  background-image: url("./img/loupe.png");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
