@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
  body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #F8FBF1;
+  background-image: url("./img/fond.jpg");
 }
 .navbar{
     border-radius: 10%;

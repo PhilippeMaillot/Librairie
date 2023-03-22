@@ -18,14 +18,8 @@ $stmt = $connexion->prepare("INSERT INTO panier (id_utilisateur, titre, categori
 
 // Bind the parameters
 $stmt->bind_param("issss", $userID, $titre, $categorie, $auteur, $image);
-
 // Execute the query
-if ($stmt->execute()) {
-    echo "Le livre a été ajouté au panier avec succès.";
-} else {
-    echo "Une erreur est survenue lors de l'ajout du livre au panier : " . $connexion->error;
-}
-
+$stmt->execute();
 // Close the statement and the database connection
 $stmt->close();
 $connexion->close();

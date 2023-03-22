@@ -58,6 +58,7 @@ foreach ($randomBooks as $bookIndex) {
                     <input type="hidden" name="categorie" value="<?= isset($volumeInfo['categories'][0]) ? $volumeInfo['categories'][0] : 'Information non disponible' ?>">
                     <input type="hidden" name="auteur" value="<?= isset($volumeInfo['authors'][0]) ? $volumeInfo['authors'][0] : 'Information non disponible' ?>">
                     <input type="hidden" name="image" value="<?= isset($volumeInfo['imageLinks']['thumbnail']) ? $volumeInfo['imageLinks']['thumbnail'] : 'https://via.placeholder.com/128x192?text=Image+non+disponible' ?>">
+                    <span class="add-to-cart-message"></span>
                     <input type="submit" value="Ajouter au panier" class="ajouter-panier">
                 </form>
           <?php } ?>

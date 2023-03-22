@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Accueil</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
                         <div class="dropdown-content hidden">
                             <a href="prive.php" class="dropdown-link">Liste de lecture</a><br>
                             <a href="modif.php" class="dropdown-link"><?php echo $data; ?></a><br>
-                            <a href="deco.php" class="dropdown-link">Deconnexion</a>
+                            <a href="deco.php" class="dropdown-link">Se déconnecter</a>
                         </div>
                     </div>
                 </li>

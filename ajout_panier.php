@@ -24,12 +24,11 @@ if (isset($_POST['titre']) && isset($_POST['categorie']) && isset($_POST['auteur
             $categorie = $conn->real_escape_string($_POST['categorie'][$i]);
             $auteur = $conn->real_escape_string($_POST['auteur'][$i]);
             $image = $conn->real_escape_string($_POST['image'][$i]);
-
             $requete = "INSERT INTO panier (id_utilisateur, titre, categorie, auteur, image) VALUES ('$id_user', '$titre', '$categorie', '$auteur', '$image')";
 
             // Exécution de la requête
             if ($conn->query($requete) === TRUE) {
-                echo "Livre ajouté au panier avec succès.";
+                header('location:prive.php');
             } else {
                 echo "Erreur : " . $requete . "<br>" . $conn->error;
             }
@@ -37,6 +36,5 @@ if (isset($_POST['titre']) && isset($_POST['categorie']) && isset($_POST['auteur
     } else {
         echo "Erreur : utilisateur non trouvé.";
     }
-    header('location:prive.php');
 }
 ?>
