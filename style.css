@@ -197,6 +197,7 @@ input[type="image"] {
   text-decoration: none;
   background-color: rgb(236, 240, 243);
   transition: background-color 0.3s ease;
+  margin-right: 100px;
   border-width: 0.2px;
   border-color: #ffffff;
   border-bottom-right-radius: 0%;
@@ -218,8 +219,8 @@ input[type="image"] {
   border-radius: 10px;
   padding: 10px 80px;
   border : solid 1px rgb(50, 48, 48);
-  margin-right: 150px;
-  margin-left: 200px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .search-container input[type="image"] {
