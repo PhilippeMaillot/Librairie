@@ -161,7 +161,7 @@ input[type="image"] {
   white-space: pre-line;
 }
 .book-info input {
-  margin-left: 80rem;
+  position: relative;
 }
 .dropdown {
   position: relative;
