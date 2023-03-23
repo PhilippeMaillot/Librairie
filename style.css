@@ -63,6 +63,7 @@ input {
   border-width: 1px;
   border-color: #9E9F8D;
   margin-left: 10px;
+  color: inherit;
 }
   .btn2:hover{
     background-color: rgba(163, 170, 168, 0.096);
