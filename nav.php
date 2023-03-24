@@ -7,7 +7,7 @@
     <script defer src="app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Accueil</title>
+    <title>BookMaZone</title>
 </head>
 <body>
 <div class="cadre">
