@@ -13,7 +13,7 @@ if (empty($_GET['nom'])) {
     $searchTerm = $_GET['nom'];
 
     // Connexion à l'API Google Books
-    $url = "https://www.googleapis.com/books/v1/volumes?q=" . urlencode($searchTerm) . "&langRestrict=fr";
+    $url = "https://www.googleapis.com/books/v1/volumes?q=" . urlencode($searchTerm) . "&maxResults=40&langRestrict=fr";
     $url .= "intitle:" . urlencode($searchTerm) . "+";
     $url .= "inauthor:" . urlencode($searchTerm) . "+";
     $url .= "subject:" . urlencode($searchTerm);
