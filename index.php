@@ -7,7 +7,7 @@
       $result = $connexion->query($requete);
       if ($result->num_rows > 0) {
         $data = $result->fetch_assoc();
-        echo "Bienvenue sur Bookmazon " . $data['nom'] . ", une petite envie de lire ? ";
+        echo "Bienvenue sur BookMaZone " . $data['nom'] . ", une petite envie de lire ? ";
       }
     } 
     ?>
@@ -28,10 +28,9 @@
     echo 'Erreur : ' . $data['error']['message'];
     exit();
 }
-// Récupération de 10 livres aléatoires
+
 $randomBooks = array_rand($data['items'], 10);
 
-// Parcours des livres aléatoires et affichage des informations
 foreach ($randomBooks as $bookIndex) {
   $volumeInfo = $data['items'][$bookIndex]['volumeInfo'];
 ?>
