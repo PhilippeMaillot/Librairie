@@ -3,9 +3,8 @@ var content = document.querySelector(".dropdown-content");
 dropdown.addEventListener("click", function() {
   content.classList.toggle("hidden");
 });
-
 var menu = document.getElementById("mon-menu");
-menu.addEventListener("change", function() {
+    menu.addEventListener("change", function() {
   var selectedOption = this.options[this.selectedIndex];
   window.location.href = selectedOption.value;
 });

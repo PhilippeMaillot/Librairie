@@ -31,7 +31,7 @@
                     <div class="dropdown">
                         <button class="btn3">Compte</button>
                         <div class="dropdown-content hidden">
-                            <a href="prive.php" class="dropdown-link">Liste de lecture</a><br>
+                            <a href="prive.php" class="dropdown-link">Panier</a><br>
                             <a href="modif.php" class="dropdown-link"><?php echo $data; ?></a><br>
                             <a href="deco.php" class="dropdown-link">Se déconnecter</a>
                         </div>

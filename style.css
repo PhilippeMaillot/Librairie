@@ -62,7 +62,7 @@ input {
   margin-right: 10px;
   border-width: 1px;
   border-color: #9E9F8D;
-  margin-left: 10px;
+  margin-left: 20px;
   color: inherit;
 }
   .btn2:hover{
@@ -206,8 +206,8 @@ h1{
   padding: 10px 40px 10px 20px;
   border : solid 1px rgb(50, 48, 48);
   width: 300px;
-  margin-right: 150px;
-  margin-left: 160px;
+  margin-left: 140px;
+  margin-right: 170px;
 }
 
 .search-container input[type="image"] {

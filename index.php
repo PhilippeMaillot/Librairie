@@ -8,33 +8,26 @@
       if ($result->num_rows > 0) {
         $data = $result->fetch_assoc();
         echo "Bienvenue sur Bookmazon " . $data['nom'] . ", une petite envie de lire ? ";
-      } else {
-        echo "Impossible de récupérer les informations de l'utilisateur connecté.";
       }
     } 
     ?>
     <h1> Voici notre recommandation du jour : <h1>
     <hr>
     <?php
-    // Paramètres de recherche
     $authors = array('Herman Melville', 'Charles Dickens', 'Jane Austen', 'Edgar Allan Poe', 'Mark Twain', 'Agatha Christie', 'J.K. Rowling', 'Gabriel García Márquez', 'Ernest Hemingway', 'Toni Morrison');
     $q = urlencode('inauthor:' . $authors[array_rand($authors)]);
     $maxResults = 10;
-    $langRestrict = 'fr';
-
-    // URL de recherche
-    $url = "https://www.googleapis.com/books/v1/volumes?q=$q&maxResults=$maxResults&langRestrict=$langRestrict";
+    $url = "https://www.googleapis.com/books/v1/volumes?q=$q&maxResults=$maxResults&langRestrict=fr";
     $jsonData = file_get_contents($url);
 
 // Conversion des données JSON en tableau associatif PHP
-$data = json_decode($jsonData, true);
+    $data = json_decode($jsonData, true);
 
 // Vérification des erreurs
-if (isset($data['error'])) {
+   if (isset($data['error'])) {
     echo 'Erreur : ' . $data['error']['message'];
     exit();
 }
-
 // Récupération de 10 livres aléatoires
 $randomBooks = array_rand($data['items'], 10);
 
